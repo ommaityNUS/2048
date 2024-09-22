@@ -102,13 +102,13 @@ class Cell {
         if (this.tile == null || this.mergeTile == null) return
         this.tile.value = this.tile.value + this.mergeTile.value
         this.mergeTile.remove()
-        this.mergetTile = null
+        this.mergeTile = null
     }
 }
 
 function createCellElements(gridElement) {
     const cells = []
-    for (let i = 0; i < Math.pow(GRID_SIZE, 2); i++) {
+    for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
         const cell = document.createElement("div")
         cell.classList.add("cell")
         cells.push(cell)
@@ -116,4 +116,3 @@ function createCellElements(gridElement) {
     }
     return cells
 }
-
